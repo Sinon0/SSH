@@ -23,10 +23,29 @@ public class UserServiceImpl implements UserService {
 		this.dao = dao;
 	}
 	
+	/**
+	 *@author Sinon
+	 *register implement
+	 */
 	@Override
 	public void add(User user) {
 //		System.out.println("当前对象的ID："+this);
 		// TODO Auto-generated method stub
 	   dao.save(user);
+	}
+
+	/**
+	 * 判断是否注册service接口实现
+	 */
+	@Override
+	public boolean checkExists(User user) {
+		// TODO Auto-generated method stub
+		return dao.isExists(user);
+	}
+
+	@Override
+	public User get(User user) {
+		// TODO Auto-generated method stub
+		return dao.get(user);
 	}
 }

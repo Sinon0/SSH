@@ -4,10 +4,12 @@
     "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 	<include file="user.xml"></include>
+	<include file="album.xml"></include>
+	<constant name="struts.multipart.maxSize" value="10485760"/>
 	<package name="all" namespace="/" extends="struts-default">
 		<!-- 配置一个全局的resulte -->
 		<global-results>
 			<result name="main">/main.jsp</result>
 		</global-results>
-	</package>
+    </package>
 </struts>

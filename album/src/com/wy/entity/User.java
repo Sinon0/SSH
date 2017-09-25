@@ -1,8 +1,13 @@
 package com.wy.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /***
  * entity user
@@ -10,10 +15,14 @@ import javax.persistence.Id;
  *
  */
 @Entity
+@Table(name="user")
 public class User {
 	private int id;
 	private String userName;
 	private String userPwd;
+	
+	private Set<Album> albums=new HashSet<Album>();
+
 	@Id
 	@GeneratedValue
 	public int getId() {
@@ -33,5 +42,12 @@ public class User {
 	}
 	public void setUserPwd(String userPwd) {
 		this.userPwd = userPwd;
+	}
+	@OneToMany(mappedBy="user")
+	public Set<Album> getAlbums() {
+		return albums;
+	}
+	public void setAlbums(Set<Album> albums) {
+		this.albums = albums;
 	}
 }

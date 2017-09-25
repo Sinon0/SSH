@@ -10,6 +10,21 @@
 	登录
 	<br />
 	<br />
-
+<form method="post" action="${pageContext.request.contextPath }/user/login">
+		<table>
+			<tr>
+				<td>用户名：</td>
+				<td><input type="text" name="user.userName" /></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input type="password" name="user.userPwd" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="登录" /></td>
+			</tr>
+		</table>
+	</form>
+	<a href="${pageContext.request.contextPath }/main.jsp">返回主页</a>
 </body>
 </html>

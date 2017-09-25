@@ -15,7 +15,7 @@
        
      <!-- context声明命名空间 -->
      <context:annotation-config/>
-     <context:component-scan base-package="com.wy.impl,com.wy.service.impl,com.wy.aop"/>
+     <context:component-scan base-package="com.wy.impl,com.wy.service.impl"/>
      
      <!-- 说明aop是通过注解的方式进行的 -->
      <aop:aspectj-autoproxy/>
@@ -83,6 +83,7 @@
      	<tx:attributes>
      		<tx:method name="add*" propagation="REQUIRED"/>
      		<tx:method name="get*" read-only="true" propagation="REQUIRED"/>
+     		<tx:method name="check*" read-only="true" propagation="REQUIRED"/>
      	</tx:attributes>
      </tx:advice>
 </beans>
