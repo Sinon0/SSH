@@ -6,8 +6,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
-
-import com.opensymphony.xwork2.ActionContext;
 import com.wy.entity.Album;
 import com.wy.entity.User;
 import com.wy.service.AlbumService;
@@ -48,14 +46,14 @@ public class AlbumAction {
 	public UserService getUserService() {
 		return userService;
 	}
-	@Resource
+	@Resource(name="service")
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
 	public AlbumService getAlbumService() {
 		return albumService;
 	}
-	@Resource
+	@Resource(name="albumService")
 	public void setAlbumService(AlbumService albumService) {
 		this.albumService = albumService;
 	}

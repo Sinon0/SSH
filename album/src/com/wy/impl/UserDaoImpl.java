@@ -3,12 +3,8 @@ package com.wy.impl;
 import java.util.List;
 
 import javax.annotation.Resource;
-
-import org.springframework.context.annotation.Scope;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
 import com.wy.dao.UserDAO;
 import com.wy.entity.User;
 
